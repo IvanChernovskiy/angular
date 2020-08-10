@@ -1,0 +1,15 @@
+<div class="card">
+  <h1>{{ p.title }}</h1>
+  <p>ID {{ p.id }}</p>
+
+  <div class="div" *ngIf="isInput">
+    <input type="text" class="form-control" [(ngModel)]="inputValue" />
+  </div>
+
+  <button class="btn" *ngIf="isInput" (click)="submitUpdate()">
+    Submit update
+  </button>
+
+  <button class="btn" (click)="updatePost()" *ngIf="!isInput">update</button>
+  <button class="btn" (click)="removePost()">delete</button>
+</div>
