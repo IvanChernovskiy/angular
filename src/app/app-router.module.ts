@@ -16,7 +16,7 @@ const routes: Routes = [
     canActivateChild: [AuthGuard],
     children: [{ path: 'extra', component: AboutExtraComponent }],
   },
-  { path: 'posts', component: PostsComponent },
+  { path: 'posts', component: PostsComponent, canActivate: [AuthGuard] },
   { path: 'posts/:id', component: PostComponent },
   { path: 'error', component: ErrorPageComponent },
   { path: '**', redirectTo: '/error' },
