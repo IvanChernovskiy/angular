@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "predeploy": "npm build",
     "deploy": "netlify deploy -p"
-
   },
   "private": true,
   "dependencies": {
