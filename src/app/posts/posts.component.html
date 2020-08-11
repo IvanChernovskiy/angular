@@ -11,8 +11,18 @@
   <button class="btn" (click)="addPost()">add post</button>
 </form>
 
+<form class="form">
+  <input
+    type="text"
+    placeholder="Search..."
+    class="form-control"
+    name="filter"
+    [(ngModel)]="serach"
+  />
+</form>
+
 <app-post
-  *ngFor="let post of allPosts"
+  *ngFor="let post of allPosts | filter: serach"
   [p]="post"
   (postId)="removePost($event)"
   (updateObj)="updatePost($event)"

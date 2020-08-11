@@ -9,6 +9,7 @@ import { Posts, PostsService } from './posts.service';
 export class PostsComponent implements OnInit {
   allPosts: Posts[] = [];
   postTitle: string = '';
+  serach = '';
 
   constructor(private postsService: PostsService) {}
 
@@ -32,6 +33,8 @@ export class PostsComponent implements OnInit {
         this.postTitle = '';
       });
   }
+
+  searchPosts() {}
 
   removePost(id) {
     this.postsService

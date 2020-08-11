@@ -11,6 +11,7 @@ import { PostComponent } from './post/post.component';
 import { AboutExtraComponent } from './about-extra/about-extra.component';
 import { AppRouterComponent } from './app-router.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     PostComponent,
     AboutExtraComponent,
     ErrorPageComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, FormsModule, AppRouterComponent, HttpClientModule],
   providers: [],
